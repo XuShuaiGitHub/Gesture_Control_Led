@@ -7,8 +7,8 @@ Gesture_Control_Led 是一个基于 MediaPipe 和 Arduino 的手势识别控制�
 ## 📸 项目演示地址
 
 ```
-Gesture_Control_Led/手势控制LED-Python.mp4
-Gesture_Control_Led/手势控制LED-Arduino.mp4
+Gesture_Control_Led/gesture_control_led_arduino.mp4
+Gesture_Control_Led/gesture_control_led_python.mp4
 ```
 
 ## 🧩 项目结构
@@ -24,33 +24,31 @@ Gesture_Control_Led/
 ## 🛠️ 功能描述
 
 - **手势识别**：
-  
+
   - 使用 [MediaPipe](https://github.com/google/mediapipe) 进行手部关键点检测。
   - 支持以下两种手势：
     - 捏合手势（拇指和食指指尖距离小于阈值）：触发开灯操作。
     - 张开手掌（手腕与中指指尖距离大于阈值）：触发关灯操作。
 
 - **串口通信**：
-  
+
   - Python 程序通过串口将手势指令发送到 Arduino。
   - 开灯指令为字符 `'1'`，关灯指令为字符 `'0'`。
 
 - **Arduino 控制**：
-  
+
   - Arduino 接收串口指令并根据指令控制 LED 灯的开关。
-
-
 
 ## 🔧 硬件需求
 
-| 设备               | 数量  | 说明            |
-| ---------------- | --- | ------------- |
-| Arduino Uno 或兼容板 | 1   | 主控设备          |
-| LED 灯            | 1   | 建议使用限流电阻      |
-| USB 数据线          | 1   | 连接电脑与 Arduino |
-| 摄像头              | 1   | 电脑自带或外接摄像头    |
+| 设备                 | 数量 | 说明                 |
+| -------------------- | ---- | -------------------- |
+| Arduino Uno 或兼容板 | 1    | 主控设备             |
+| LED 灯               | 1    | 建议使用限流电阻     |
+| USB 数据线           | 1    | 连接电脑与 Arduino   |
+| 摄像头               | 1    | 电脑自带或外接摄像头 |
 
-## 
+##
 
 ## 🐍 软件依赖 (Python 端)
 
@@ -60,7 +58,7 @@ Gesture_Control_Led/
 pip install opencv-python mediapipe pyserial
 ```
 
-<mark>⚠</mark> 注意：python版本不能太高，推荐3.10版本
+<mark>⚠</mark> 注意：python 版本不能太高，推荐 3.10 版本
 
 ---
 
@@ -78,7 +76,7 @@ pip install opencv-python mediapipe pyserial
 
 ### 1. 上传 Arduino 代码
 
-- 打开 `led/led.ino` 文件。
+- 打开  `led/led.ino`  文件。
 - 将 Arduino 板连接到电脑。
 - 在 Arduino IDE 中选择正确的开发板和端口。
 - 上传代码到 Arduino 板。
@@ -88,7 +86,7 @@ pip install opencv-python mediapipe pyserial
 - 修改 [gesture_control.py](file://d:\MyProject\Ideas\Gesture_Control_Led\gesture_control.py) 中的串口端口号（如 `'COM5'`）以匹配你的 Arduino 端口。
 
 - 运行程序：
-  
+
   ```bash
   python gesture_control.py
   ```
