@@ -7,18 +7,24 @@ Gesture_Control_Led 是一个基于 MediaPipe 和 Arduino 的手势识别控制�
 ## 📸 项目演示地址
 
 ```
-Gesture_Control_Led/gesture_control_led_arduino.mp4
-Gesture_Control_Led/gesture_control_led_python.mp4
+Gesture_Control_Led/demo/gesture_control_led_arduino.mp4
+Gesture_Control_Led/demo/gesture_control_led_python.mp4
 ```
 
 ## 🧩 项目结构
 
 ```
 Gesture_Control_Led/
-├── README.md
-├── gesture_control.py
-└── led/
-    └── led.ino
+│
+├── 📄 README.md
+├── 🐍 gesture_detection.py
+├── 🐍 gesture_control.py
+├── 🎥 demo/
+│   ├── gesture_control_led_arduino.mp4
+│   └── gesture_control_led_python.mp4
+└── 📦 arduino/
+    └── 📦 led/
+        └── 📄 led.ino
 ```
 
 ## 🛠️ 功能描述
